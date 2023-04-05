@@ -81,6 +81,13 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(DEV_MNEMONIC, 'http://127.0.0.1:8545'),
     },
+    docker: {
+      host: 'ganache', // Localhost (default: none)
+      port: 8545, // Standard Ethereum port (default: none)
+      network_id: '*', // Any network (default: none),
+      provider: () =>
+        new HDWalletProvider(DEV_MNEMONIC, 'http://ganache:8545'),
+    },
     mumbai: {
       provider: () => new HDWalletProvider(DEV_MNEMONIC, MUMBAI_INFURA_API),
       network_id: '80001',

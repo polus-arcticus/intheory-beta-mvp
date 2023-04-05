@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:docker": "cd evm && truffle deploy --network docker"
   },
   "dependencies": {
     "@dynamic-labs/sdk-react": "^0.15.9",
